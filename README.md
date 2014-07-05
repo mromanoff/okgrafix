@@ -1,11 +1,15 @@
 OKgrafix 2014 
 
-Okgrafix web site build on Backbone-Boilerplate by Tim Branyen
-==============================================================
+Okgrafix web site 
+=================
 
 This site build with Backbone, BackboneLayoutManager, Lo-Dash (Underscore compatibility
 build), jQuery, RequireJS, Bower, Grunt, Karma, Sass, Susy, IcoMoon.
 Built in testing support for: QUnit, Jasmine, and Mocha with Chai.
+
+It was build on Backbone-Boilerplate, BackboneLayoutManager by Tim Branyen,
+adding SASS, Susy frameworks and IcoMoon.
+
 
 ## Documentation ##
 
