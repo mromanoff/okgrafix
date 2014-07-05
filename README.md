@@ -19,6 +19,13 @@ View the Backbone Boilerplate documentation here:
 View Backbone Layout Manager documentation here:
 [GitHub Wiki](https://github.com/tbranyen/backbone.layoutmanager/wiki)
 
+View Susy documentation here:
+[GitHub Wiki](https://github.com/ericam/susy/wiki)
+
+View IcoMoon documentation here:
+[GitHub Wiki](http://icomoon.io/#docs)
+
+
 ## Getting started ##
 
 The easiest way to get started is to install Git and clone the repository:
