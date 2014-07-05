@@ -23,7 +23,7 @@ View Susy documentation here:
 [GitHub Wiki](https://github.com/ericam/susy/wiki)
 
 View IcoMoon documentation here:
-[GitHub Wiki](http://icomoon.io/#docs)
+[IcoMoon docs](http://icomoon.io/#docs)
 
 
 ## Getting started ##
