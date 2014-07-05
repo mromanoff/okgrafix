@@ -1,0 +1,58 @@
+// 1- ALL SASS CODE MUST BE COMMENTED USING KSS
+//    More information available at http://warpspire.com/kss/syntax/
+// 2- All files should start with underscore UNLESS their exported .css is explicitly wanted
+// 3- This file (main) should only have import rules.
+// 4- All classes should be DASH SEPARATED (name-thing)
+// 5- DRY
+// 6- SMACSS (http://webuild.envato.com/blog/how-to-scale-and-maintain-legacy-css-with-sass-and-smacss/)
+// 7- Media queries in their specific section
+// 8- Mobile first
+
+// ---------------------------------------------------------------------------
+// Imports
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+
+@import "config/_settings";
+@import "config/_mixins";
+
+
+@import "susy";
+@import "rgbapng";
+@import "_fonts";
+
+@import "_small";
+
+//@media screen and (min-width: $medium-breakpoint) {
+  //@import "_medium";
+//}
+
+//@media screen and (min-width: $large-breakpoint) {
+  //@import "_large";
+//}
+
+
+// ---------------------------------------------------------------------------
+// Basic Grid
+
+//$total-columns  : 12;
+//$column-width   : 4em;
+//$gutter-width   : 1em;
+//$grid-padding   : $gutter-width;
+//
+//$show-grid-backgrounds  : true;
+//
+//$break          : 12;
+
+$total-columns  : 6;
+$column-width   : 4em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+
+$show-grid-backgrounds  : true;
+
+
+$base-font-size: 16px;
+
+$break: 12;

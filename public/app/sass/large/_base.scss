@@ -1,0 +1,15 @@
+main {
+    padding-top: 60px;
+}
+
+
+// Modules Margin-Padding
+$section-margin: 40px;
+
+.module:last-child {
+  margin-bottom: $section-margin;;
+}
+
+footer {
+  margin-top: $section-margin;
+}

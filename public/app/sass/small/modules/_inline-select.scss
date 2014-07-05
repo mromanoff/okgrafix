@@ -1,0 +1,68 @@
+//Inline Select Component
+
+.select-wrApper {
+    @include inline-block;
+    border-bottom: 1px solid #080808;
+    font-size: 28px;
+    margin-top: -12px;
+    position: relative;
+    text-transform: uppercase;
+
+    &.error {
+        border-color: red !important;
+    }
+
+    .option {
+        color: #080808;
+
+        &:after {
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+
+            @include inline-block;
+            content: "\e60b";
+            margin-left: 10px;
+            font-size: 22px;
+        }
+    }
+
+
+    select {
+        -webkit-Appearance: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include opacity(0);
+    }
+
+    &.white {
+        position: relative;
+        display: block;
+        max-width: 68%;
+        border: 1px solid #fff;
+        margin: 10px auto;
+        padding: 12px 30px;
+        padding-top: 7px;    
+        
+        .option {
+            color: #fff;
+            &:after {
+                position: absolute;
+                top: 33%;
+                right: 6px;
+                content: "\e60b";
+                font-size: 20px;
+            }
+        }
+    }
+
+}

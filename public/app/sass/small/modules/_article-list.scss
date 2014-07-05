@@ -1,0 +1,117 @@
+.article-list {
+    & > div {
+        min-height: 290px;
+        border-top: 1px solid #b2b2b2;
+    }
+
+    .post-info-container {
+        display: table;
+        width: 100%;
+
+        .posts-info {
+            padding:0 $section-side-padding;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+
+            h3 {
+                margin-top: 17px;
+            }
+        }
+
+    }
+
+    .articles {
+        border-bottom: 1px solid #b2b2b2;
+    }
+
+    .articles {
+
+        article {
+            a {
+                @include pie-clearfix;
+                display: block;
+            }
+
+            .cover, .info {
+                float: right;
+                width: 50%;
+            }
+
+            .cover {
+                position: relative;
+                overflow: hidden;
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+                &:before {
+                    z-index: 100;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                    border-left: 10px solid transparent;
+                    border-left: 10px solid #fff;
+                    content: "";
+                    display: block;
+                    height: 0;
+                    width: 0;
+                    left: 9px;
+                    bottom: 45%;
+                    margin: -9px 0 0 -9px;
+                    position: absolute;
+                }
+            }
+
+            &:first-child {
+                .cover, .info {
+                    float: left;
+                }
+                .cover {
+                    &:before {
+                        z-index: 100;
+                        border-top: 10px solid transparent;
+                        border-bottom: 10px solid transparent;
+                        border-left: 10px solid transparent;
+                        border-right: 10px solid #fff;
+                        content: "";
+                        display: block;
+                        height: 0;
+                        width: 0;
+                        right: 0;
+                        left: auto;
+                        bottom: 45%;
+                        margin: -9px 0 0 -9px;
+                        position: absolute;
+                    }
+                }
+            }
+
+
+            .info {
+                width: 40%;
+                padding-left: 10%;
+            }
+
+            span, h6, p {
+                font-size: 14px;
+                max-width: 90%;
+            }
+
+            span {
+                @include inline-block;
+                color: #666;
+                margin-bottom: 5px;
+                padding-top: 40px;
+            }
+
+            p {
+                display: none;
+            }
+
+        }
+
+    }
+
+
+}

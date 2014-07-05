@@ -1,0 +1,73 @@
+.form {
+  background: $brand-primary3;
+  @include pie-clearfix;
+
+  .form-wrApper {
+    max-width: 740px;
+    padding: 2%;
+    margin: 0 auto;
+  }
+
+
+  .button {
+    display: block;
+    max-width: 200px;
+    margin: 60px auto;
+
+    &.submit {
+      margin: 0 auto;
+    }
+  }
+
+  .control-group{
+    &.error input{
+      border-bottom: 1px solid $brand-danger;
+      border-color: $brand-danger;
+    }
+  }
+
+
+  div, input {
+    font-size: 20px;
+    font-weight: 200;
+    font-family: $font-family;
+    text-transform: uppercase;
+    outline: none;
+    letter-spacing: 3px;
+  }
+
+  input {
+    -webkit-Appearance: none;
+    @include border-radius(0px);
+
+    display: block;
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
+    border: 1px solid #fff;
+    margin: 10px auto;
+    padding: 12px 30px;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+
+    &.half {
+      width: 48%;
+      margin: 1% 0;
+    }
+  }
+
+  div {
+    margin: 20px 0;
+    text-align: center;
+    color: #989797;
+
+    small {
+      display: block;
+      margin: 20px 0;
+      font-size: 0.7em;
+      font-weight: normal;
+      color: #fff;
+    }
+  }
+}

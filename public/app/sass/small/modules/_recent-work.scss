@@ -1,0 +1,13 @@
+//TODO: make two items per row
+
+.recent-work {
+  li {
+    margin-bottom: $default-margin * 3;
+
+    img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #444;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.is-tablet, .is-desktop, .hidden {
+    display: none !important;
+}
+
+.is-mobile {
+    display: block !important;
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+/*
+White text color, mocked up contrasted background color.
+
+Styleguide 2.2
+*/
+.text-white {
+    color: #fff;
+}
