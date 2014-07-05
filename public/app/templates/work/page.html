@@ -1,0 +1,16 @@
+<section class="portfolio">
+    <h1 class="title"><%= name %></h1>
+    <img class="full-width" src="/app/img/work/large/<%= image %>" alt="<%= name %>">
+
+    <p class="html-callout"><%= description %></p>
+
+    <p class="html-callout">
+        <strong>Website:</strong> <a href="<%= url %>" target="_blank"><%= name %></a>
+
+        <strong>Client:</strong>
+        <% _.each(client, function(i) { %>
+        <a href="<%= i.url %>" target="_blank"><%= i.name %></a>
+    <% }); %>
+    </p>
+    <p class="html-callout"><strong>My Role: </strong><%= information %></p>
+</section>

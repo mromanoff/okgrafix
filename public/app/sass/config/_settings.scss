@@ -1,0 +1,117 @@
+// ONLY VARIABLES SHOULD BE DEFINED IN THIS FILE.
+
+// Grays
+// -------------------------
+
+$gray-darker:            #222;
+$gray-dark:              #343434; //#333;
+$gray:                   #555;
+$gray-light:             #999;
+$gray-lighter:           #eee;
+
+// Brand colors
+// -------------------------
+
+//$brand-primary:         #428bca;
+//$brand-success:         #5cb85c;
+//$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+//$brand-info:            #5bc0de;
+
+$brand-primary:         #B22222;
+$brand-primary2:        #E9967A;
+$brand-primary3:        #483D8B;
+$brand-primary4:        shade(#2F4F4F, 20%);
+$brand-primary5:        #DAA520;
+
+
+
+$brand-success:         #5cb85c;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+$brand-info:            #5bc0de;
+
+
+//TODO: saved TEMP
+$firebrick: firebrick; // #B22222 footer bg
+$darksalmon: darksalmon; // #E9967A footer color
+$darkslateblue: darkslateblue; // #483D8B forms bg
+$goldenrod: goldenrod; // #DAA520 button
+$darkgreen: #2F4F4F; // header nav
+
+
+
+
+// Scaffolding
+// -------------------------
+
+//$body-bg:               white;
+//$text-color:            $gray-dark;
+
+// Links
+// -------------------------
+
+//$link-color:            #00349a;
+//$link-hover-color:      darken($link-color, 15%);
+
+
+
+// Device brake points.
+// -------------------------
+
+$medium-breakpoint: 768px;
+$large-breakpoint: 1024px;
+
+// Primary bg and color
+$primary-fg: #000;
+$primary-bg: #fff;
+
+// Navigation Variables
+$navigation-background: $brand-primary4;
+$navigation-background-active: rgba(32, 55, 55, 0.9);
+
+//Footer
+$footer-text-color: $brand-primary2;
+$footer-bg-color: $brand-primary;
+
+// buttons
+$primary-btn-bg: $brand-primary5;
+
+// margin
+$default-margin: 20px;
+
+// padding
+$default-padding: 20px;
+
+
+// Typography
+// -------------------------
+
+$font-family: 'Graphik Web', sans-serif;  //TODO: duplicate. remove
+// font size
+$font-base: 16px;
+$font-small: ceil($font-base * 0.85);
+$font-smaller: ceil($font-base * 0.7);
+
+
+
+$font-family-sans-serif: 'Graphik Web', sans-serif;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
+$font-family-base:        $font-family-sans-serif;
+
+//$font-size-base:          15px;
+//$font-size-large:         ceil($font-size-base * 1.25); // ~18px
+//$font-size-small:         ceil($font-size-base * 0.85); // ~12px
+//
+//$font-size-h1:            floor($font-size-base * 2.6); // ~36px
+//$font-size-h2:            floor($font-size-base * 1.7); // MR // 2.15 ~30px
+//$font-size-h3:            ceil($font-size-base * 1.25); // MR //1.7~24px
+//$font-size-h4:            ceil($font-size-base * 1.25); // ~18px
+//$font-size-h5:            $font-size-base;
+//$font-size-h6:            ceil($font-size-base * 0.85); // ~12px
+//
+//$line-height-base:        1.428571429; // 20/14
+//$line-height-computed:    floor($font-size-base * $line-height-base); // ~20px
+
+

@@ -1,0 +1,53 @@
+// Spacing Varialbes/Mixins
+@mixin small-padding {
+    padding: 0 20px;
+}
+
+@mixin large-padding {
+    padding: 0 40px;
+}
+
+// Small label mixin, used mostly for buttons
+// TODO: Styleguide x.x
+@mixin small-label {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@mixin medium-label {
+    @include small-label;
+    font-size: 14px;
+}
+
+// Buttons Mixins
+@mixin box-button {
+    border-width: 1px;
+    border-style: solid;
+    padding: 1.2em 1.5em;
+}
+
+// Copy Mixins
+@mixin small-copy {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+@mixin large-copy {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    margin: 0 0 3em;
+}
+
+//Samsung S4 Exclusive Border Radius Mixin.
+@mixin border-radius($r) {
+    border-radius: $r;
+    border-top-left-radius: $r;
+    border-top-right-radius: $r;
+    border-bottom-left-radius: $r;
+    border-bottom-right-radius: $r;
+}

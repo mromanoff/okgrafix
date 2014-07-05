@@ -1,0 +1,68 @@
+<nav class="main-transparent is-mobile" data-component="navigation">
+    <a href="#" data-bypass="true" class="menu icon-menu is-mobile"></a>
+    <a href="#" data-bypass="true" class="icon-close is-hidden"></a>
+</nav>
+
+<nav class="main">
+    <!-- Mobile Menu -->
+    <div class="links-wrApper is-mobile">
+        <ul class="main-links">
+            <li<%= (activeLink === 'overview') ? ' class="active"' : '' %>>
+            <a href="#">Overview</a></li>
+            <!--<li<%= (activeLink === 'blog') ? ' class="active"' : '' %>>-->
+            <!--<a href="#blog">Blog</a>-->
+            <!--</li>-->
+            <li<%= (activeLink === 'work') ? ' class="active"' : '' %>>
+            <a href="#work">Work</a>
+            </li>
+            <li<%= (activeLink === 'photography') ? ' class="active"' : '' %>>
+                <a href="#photography">Photography</a>
+            </li>
+            <li<%= (activeLink === 'contact') ? ' class="active"' : '' %>>
+            <a href="#contact">Contact</a>
+            </li>
+        </ul>
+
+        <ul class="secondary-links">
+            <li class=""><a class="highlight menu-login" href="#login">LOGIN</a></li>
+        </ul>
+    </div>
+
+    <!-- Login Button -->
+    <div class="login-tab is-tablet is-desktop">
+        <a href="https://myeq.equinox.com/login">Member Login</a>
+    </div>
+    <!-- Full Navigation -->
+    <div class="full-wrApper">
+        <h1 class="logo">
+            <a href="/">
+                <img src="/app/img/header-logo.png" alt="Okgrafix">
+            </a>
+        </h1>
+
+        <div class="links-wrApper is-tablet is-desktop">
+            <nav>
+                <ul class="main-links">
+                    <li<%= (activeLink === 'overview') ? ' class="active"' : '' %>>
+                    <a href="#">Overview</a></li>
+                    <!--<li<%= (activeLink === 'blog') ? ' class="active"' : '' %>>-->
+                    <!--<a href="#blog">Blog</a>-->
+                    <!--</li>-->
+                    <li<%= (activeLink === 'work') ? ' class="active"' : '' %>>
+                    <a href="#work">Work</a>
+                    </li>
+                    <li<%= (activeLink === 'photography') ? ' class="active"' : '' %>>
+                    <a href="#photography">Photography</a>
+                    </li>
+                    <li<%= (activeLink === 'contact') ? ' class="active"' : '' %>>
+                    <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <ul class="secondary-links">
+                <li class=""><a class="menu-login" href="#login">LOGIN</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

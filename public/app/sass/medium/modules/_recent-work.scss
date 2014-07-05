@@ -1,0 +1,18 @@
+//TODO: make three items per row
+
+
+.recent-work {
+
+  padding: 0 $section-side-padding;
+
+  @include at-breakpoint($medium-breakpoint 12) {
+    li {
+      @include span-columns(6); // each gallery-image is 3 of 9 cols.
+      &:nth-child(2n) {
+        @include omega;
+      }
+      // every third image completes a row.
+    }
+  }
+
+}

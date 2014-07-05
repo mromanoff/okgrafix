@@ -1,0 +1,36 @@
+main {
+    padding-top: 130px;
+}
+
+h1 {
+    &.title {
+        font-size: 2em;
+    }
+}
+
+h3 {
+    font-size: 30px;
+}
+
+hr.separator-line {
+    max-width: 125px;
+}
+
+// Modules Margin-Padding
+$section-margin: 40px;
+$section-padding: 30px;
+
+// Module WrApper
+.module {
+    margin-top: $section-margin;
+    padding-top: $section-padding;
+}
+
+/* line 142, ../sass/small/_base.scss */
+.module:last-child {
+  margin-bottom: -$section-margin;;
+}
+
+footer {
+    margin-top: $section-margin;
+}

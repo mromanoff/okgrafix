@@ -1,0 +1,11 @@
+.portfolio {
+  padding:0 $section-side-padding;
+
+  @include at-breakpoint($large-breakpoint 12) {
+    li {
+      @include span-columns(3,9); // each gallery-image is 3 of 9 cols.
+      &:nth-child(2n) { @include remove-omega; }
+      &:nth-child(3n) { @include omega; } // every third image completes a row.
+    }
+  }
+}

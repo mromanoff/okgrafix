@@ -1,0 +1,52 @@
+Large images: 1220 x 1220    size varies to 800px
+Medium images: 800 X 800
+Small images:
+
+
+
+add grunt job to build on Heroku
+//git push heroku master
+
+
+
+
+1. In large view: make 2 columns layout: 60% for image and 40% for content.
+2. create backbone forms with form fields validation.
+
+?? Large images should be 730px X 730px
+
+
+
+500px info
+
+Consumer Key: vRemLRvbgOrkPsJhzeoGdSNHiuC22aZ4TgwgXQXK    (consumer_key)
+Consumer Secret: khcUehKpHtGUiErXKOddNrHSSFq7FOpHbKUvf10D
+JavaScript SDK Key: 10e2aea1742dcba191588e8bb86d9e7d3f63cdd5
+Description: personal web site, portfolio online
+Application URL: http://okgrafix.com
+Callback URL:
+JavaScript SDK Callback URL:
+Support URL:
+Developer's Email: zelcie@gmail.com
+
+
+get user collections/sets
+https://api.500px.com/v1/users/:user_id/sets
+consumer key is required
+consumer_key=vRemLRvbgOrkPsJhzeoGdSNHiuC22aZ4TgwgXQXK
+
+https://api.500px.com/v1/users/678550/sets?consumer_key=vRemLRvbgOrkPsJhzeoGdSNHiuC22aZ4TgwgXQXK
+
+
+all my pictures
+https://api.500px.com/v1/photos?feature=user&username=michaelromanoff&sort=created_at&image_size=3&include_store=store_download&include_states=voted&consumer_key=vRemLRvbgOrkPsJhzeoGdSNHiuC22aZ4TgwgXQXK
+
+<iframe src="https://snap.apigee.com/1mLjW4n" width="800" height="300" frameborder="0" scrolling="no"></iframe>
+
+https://api.500px.com/v1/photos?feature=user&user_id=678550&sort=votes_count&rpp=100&image_size[]=3&image_size[]=4&include_store=store_download&include_states=voted&consumer_key=vRemLRvbgOrkPsJhzeoGdSNHiuC22aZ4TgwgXQXK
+
+return 'https://api.500px.com/v1/photos?feature=user&user_id=678550&sort=votes_count&rpp=100&image_size[]=1&image_size[]=2&image_size[]=3&image_size[]=4&include_store=store_download&include_states=voted&consumer_key=vRemLRvbgOrkPsJhzeoGdSNHiuC22aZ4TgwgXQXK';
+
+
+
+Get picture by ID: https://api.500px.com/v1/photos/54685296?image_size=4&comments=2&consumer_key=vRemLRvbgOrkPsJhzeoGdSNHiuC22aZ4TgwgXQXK

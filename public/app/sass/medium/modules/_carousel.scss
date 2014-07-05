@@ -1,0 +1,104 @@
+.carousel.image-carousel {
+    .swipe-guide {
+        top: auto;
+        bottom: 12%;
+    }
+}
+
+.carousel.tabbed-carousel {
+    nav {
+        .caret {
+            border: none;
+        }
+    }
+
+    .swipe-guide {
+        top: auto;
+        bottom: 10%;
+    }
+}
+
+.carousel {
+    overflow: hidden;
+    min-height: 380px;
+
+    .swipe-guide {
+        top: 54%;
+    }
+
+    //Tabbed Carousel
+    &.tabbed-carousel {
+        .owl-carousel {
+
+            .owl-item {
+                .caption {
+                    @include opacity(0);
+                    @include transition(opacity 0.5s 0.5s);
+                }
+                &.active {
+                    .caption {
+                        @include opacity(1);
+                    }
+                }
+            }
+        }
+    }
+
+    // Content Carousel Slide
+    .content-slider-item {
+        header {
+            position: relative;
+        }
+
+        .caption-wrApper {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            margin-top: -87px;
+
+            header {
+                min-height: 400px;
+            }
+
+            .caption {
+                display: table;
+                margin: 0 auto;
+                width: 450px;
+                height: 175px;
+                @include rgba-background-inline(rgba(255,255,255,0.5));
+
+                .caption-text-container {
+                    display: table-cell;
+                    vertical-align: middle;
+
+                    .content-title {
+                        font-weight: normal;
+                        font-size: 20px;
+                        padding: 0 0 20px 0;
+                        margin: 0;
+                    }
+                    p {
+                        max-width: 90%;
+                        font-size: 12px;
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+.swipe-guide {
+    font-size: 15px;
+}
+
+.tabbed-carousel-container {
+    p {
+        font-size: 12px;
+    }
+}
+
+.pagination .owl-pagination {
+    display: none;
+}

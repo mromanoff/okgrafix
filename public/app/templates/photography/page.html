@@ -1,0 +1,30 @@
+<section class="portfolio">
+    <h1 class="title"><%= name %></h1>
+    <img class="full-width" src="<%= photo.image_url %>" alt="<%= name %>">
+
+    <p class="html-callout"><%= photo.description %></p>
+
+    <p class="html-callout"><strong>Camera:</strong> <%= photo.camera %></p>
+    <p class="html-callout"><strong>Lens:</strong> <%= photo.lens %></p>
+    <p class="html-callout"><strong>Focal length:</strong> <%= photo.focal_length %></p>
+    <p class="html-callout"><strong>ISO:</strong> <%= photo.iso %></p>
+    <p class="html-callout"><strong>Aperture:</strong> <%= photo.aperture %></p>
+
+    <p class="html-callout">
+        <strong>Votes:</strong> <%= photo.votes_count %>
+        <strong>Favorites:</strong> <%= photo.favorites_count %>
+        <strong>Rating:</strong> <%= photo.highest_rating %>
+    </p>
+
+    <% if(comments.length){ %>
+    <div class="module">
+        <h2 class="title">Comments:</h2>
+        <% _.each(comments, function(i) { %>
+        <p class="html-callout">
+            <img class="gravatar" src="<%= i.user.userpic_url %>" alt="<%= i.user.fullname %>"><%= i.user.fullname%> from <%= i.user.country %><br>
+            <%= i.body %>
+        </p>
+        <% }); %>
+    </div>
+    <% } %>
+</section>
