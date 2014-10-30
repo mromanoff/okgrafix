@@ -94,12 +94,13 @@ define(function (require, exports, module) {
         recentProjectItems.fetch().then(function () {
 
             // Use the main layout.
-            App.useLayout({ template: 'layouts/twoColumn'}).setViews({
-                'header': new Overview.Views.Header({ model: new Overview.Models.Index() }),
-                'main': new Overview.Views.Content({ model: new Overview.Models.Index() }),
-                '#recentWork': new Overview.Views.RecentWork({ collection: recentProjectItems }),
-                'footer': new Overview.Views.Footer({ model: new Overview.Models.Index() })
-            }).render().promise().done(function () {});
+            App.useLayout({template: 'layouts/twoColumn'}).setViews({
+                'header': new Overview.Views.Header({model: new Overview.Models.Index()}),
+                'main': new Overview.Views.Content({model: new Overview.Models.Index()}),
+                '#recentWork': new Overview.Views.RecentWork({collection: recentProjectItems}),
+                'footer': new Overview.Views.Footer({model: new Overview.Models.Index()})
+            }).render().promise().done(function () {
+            });
         });
     };
 
