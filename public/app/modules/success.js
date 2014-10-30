@@ -41,9 +41,7 @@ define(function (require, exports, module) {
             'header': new Success.Views.Header({ model: new Success.Model() }),
             'main': new Success.Views.Content({ model: new Success.Model() }),
             'footer': new Success.Views.Footer({ model: new Success.Model() })
-        }).render().promise().done(function () {
-            debug('[Success] All views finished rendering.');
-        });
+        }).render().promise().done(function () {});
     };
 
     module.exports = Success;

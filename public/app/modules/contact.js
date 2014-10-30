@@ -81,7 +81,6 @@ define(function (require, exports, module) {
             }, this);
 
             this.model.on('change', function () {
-                debug('[Success]');
                 this.hideErrors();
             }, this);
 
@@ -91,8 +90,6 @@ define(function (require, exports, module) {
 
         showErrors: function (errors) {
             _.each(errors, function (error) {
-                debug('[show errors] ', error.name);
-
                 var controlGroup = this.$('.' + error.name);
                 controlGroup.addClass('error');
                 controlGroup.find('.help-inline').text(error.message);
@@ -125,9 +122,7 @@ define(function (require, exports, module) {
             'header': new Contact.Views.Header({ model: new Contact.Models.Index() }),
             'main': new Contact.Views.Content({ model: new Contact.Models.Index() }),
             'footer': new Contact.Views.Footer({ model: new Contact.Models.Index() })
-        }).render().promise().done(function () {
-            debug('[CONTACT] All views finished rendering.');
-        });
+        }).render().promise().done(function () {});
     };
 
     module.exports = Contact;

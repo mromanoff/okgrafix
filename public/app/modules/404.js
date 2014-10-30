@@ -46,9 +46,7 @@ define(function (require, exports, module) {
             'header': new NotFound.Views.Header({ model: new NotFound.Model() }),
             'main': new NotFound.Views.Content({ model: new NotFound.Model() }),
             'footer': new NotFound.Views.Footer({ model: new NotFound.Model() })
-        }).render().promise().done(function () {
-            debug('[404] All views finished rendering.');
-        });
+        }).render().promise().done(function () {});
     };
 
     module.exports = NotFound;

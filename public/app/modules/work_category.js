@@ -78,9 +78,7 @@ define(function (require, exports, module) {
                 'header': new WorkCategory.Views.Header({ model: new WorkCategory.Model() }),
                 'main': new WorkCategory.Views.Content({ model: new WorkCategory.Model(), collection: projects }),
                 'footer': new WorkCategory.Views.Footer({ model: new WorkCategory.Model() })
-            }).render().promise().done(function () {
-                debug('[WORK] All views finished rendering.');
-            });
+            }).render().promise().done(function () {});
         });
     };
 

@@ -75,7 +75,6 @@ define(function (require, exports, module) {
             }, this);
 
             this.model.on('change', function () {
-                debug('[Success]');
                 this.hideErrors();
             }, this);
 
@@ -85,8 +84,6 @@ define(function (require, exports, module) {
 
         showErrors: function (errors) {
             _.each(errors, function (error) {
-                debug('[show errors] ', error.name);
-
                 var controlGroup = this.$('.' + error.name);
                 controlGroup.addClass('error');
                 controlGroup.find('.help-inline').text(error.message);
@@ -121,9 +118,7 @@ define(function (require, exports, module) {
             'header': new Login.Views.Header({ model: new Login.Model() }),
             'main': new Login.Views.Content({ model: new Login.Model() }),
             'footer': new Login.Views.Footer({ model: new Login.Model() })
-        }).render().promise().done(function () {
-            debug('[LOGIN] All views finished rendering.');
-        });
+        }).render().promise().done(function () {});
     };
 
     module.exports = Login;

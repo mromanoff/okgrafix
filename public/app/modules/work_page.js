@@ -66,9 +66,7 @@ define(function (require, exports, module) {
                 'header': new WorkPage.Views.Header({ model: new WorkPage.Model() }),
                 'main': new WorkPage.Views.Content({ model: item}),
                 'footer': new WorkPage.Views.Footer({ model: new WorkPage.Model() })
-            }).render().promise().done(function () {
-                //debug('[WorkPage] All views finished rendering.');
-            });
+            }).render().promise().done(function () {});
         });
     };
 

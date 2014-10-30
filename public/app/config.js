@@ -1,19 +1,18 @@
-var consts = {};
-
-consts.BASEPATH = '';
-consts.VENDOR = consts.BASEPATH + '/vendor';
-consts.BOWER = consts.VENDOR + '/bower';
-consts.APP = consts.BASEPATH + '/app';
-consts.MODULES = consts.APP + '/modules';
-consts.TEMPLATES = consts.APP + '/templates/'; // must have trailing '/' for templates
-consts.API = consts.APP + '/api';
+//var consts = {};
+//
+//consts.BASEPATH = '';
+//consts.VENDOR = consts.BASEPATH + '/vendor';
+//consts.BOWER = consts.VENDOR + '/bower';
+//consts.APP = consts.BASEPATH + '/app';
+//consts.MODULES = consts.APP + '/modules';
+//consts.TEMPLATES = consts.APP + '/templates/'; // must have trailing '/' for templates
+//consts.API = consts.APP + '/api';
 
 
 // This is the runtime configuration file.  It complements the Gruntfile.js by
 // supplementing shared properties.
 require.config({
     paths: {
-        vendor: '../vendor',
         almond: '../vendor/bower/almond/almond',
         underscore: '../vendor/bower/lodash/dist/lodash.underscore',
 

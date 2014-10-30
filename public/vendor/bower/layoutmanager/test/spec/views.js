@@ -9,7 +9,7 @@ QUnit.module("views", {
     // run in the absense of the DOM (for Node.js). Store a reference to the
     // default `fetchTemplate` method to be restored in the teardown of this test
     // module.
-    this.origFetch = Backbone.Layout.prototype.options.fetchTemplate;
+    this.origFetch = Backbone.Layout.prototype.fetchTemplate;
 
     Backbone.Layout.configure({
       fetchTemplate: function(name) {
@@ -102,7 +102,7 @@ QUnit.module("views", {
     });
 
     // Remove `supressWarnings: true`.
-    delete Backbone.Layout.prototype.options.suppressWarnings;
+    delete Backbone.Layout.prototype.suppressWarnings;
     delete Backbone.View.prototype.suppressWarnings;
   }
 });
@@ -696,7 +696,7 @@ asyncTest("Ensure afterRender can access element's parent.", 1, function() {
     views: {
       ".left": new Backbone.Layout({
         afterRender: function() {
-          ok(this.options.contains(view.el, this.el),
+          ok(this.contains(view.el, this.el),
             "Parent can be found in afterRender");
 
           start();
@@ -898,7 +898,7 @@ test("Ensure global paths are adhered to", 1, function() {
       template: "here"
     });
 
-    equal(t.getAllOptions().prefix, "test/", "Prefix properly hooked up");
+    equal(t.prefix, "test/", "Prefix properly hooked up");
 
     Backbone.Layout.configure({
       prefix: ""
@@ -1157,7 +1157,7 @@ asyncTest("beforeRender and afterRender called twice in async", 3, function() {
 
   var list = new List({ model: m });
 
-  list.options.when([list.render(), list.render()]).then(function() {
+  list.when([list.render(), list.render()]).then(function() {
     list.getView("tbody").on("afterRender", function() {
       if (hitAfter === renderNum) {
         equal(hitBefore, 3, "beforeRender hit four times");
@@ -1315,9 +1315,9 @@ test("attached even if already rendered", 1, function() {
   view.render();
 
   var layout = new Backbone.Layout();
-  layout.setView(view);
+  layout.setView(view).render();
 
-  ok(view.options.contains(layout.el, view.el), "View exists inside Layout");
+  ok(view.contains(layout.el, view.el), "View exists inside Layout");
 });
 
 test("correctly remove inserted child views", function() {
@@ -1499,7 +1499,7 @@ asyncTest("Duplicate sub-views are removed when their parent view is rendered re
     }
   });
 
-  list.options.when([list.render(), list.render()]).done(function() {
+  list.when([list.render(), list.render()]).done(function() {
     equal(list.views[""].length, 1, "All repeated sub-views have been removed");
     start();
   });
@@ -1648,7 +1648,6 @@ test("manage your own view element", 1, function() {
   }));
 
   layout.render();
-
   equal(layout.$el.html(), "<ul><li>lol</li></ul>", "Nested element is an LI");
 });
 
@@ -2275,4 +2274,37 @@ test("templates strings with whitespace should render without error (trimmed whi
     "'noel' didn't throw an error about multiple top level elements.");
   equal(testUtil.trim(layout.$el.text()), "Hey");
   console.warn = oldConsoleWarn;
+});
+
+// https://github.com/tbranyen/backbone.layoutmanager/issues/417
+test("Call setView to switch layout with nested views does not work", 1, function() {
+  var Layout1 = Backbone.Layout.extend({
+    template: function() { return "<div class='layout1'></div>"; },
+    views: {
+      ".layout1": new Backbone.Layout()
+    }
+  });
+
+  new Layout1().render();
+
+  var actual;
+
+  try {
+    new Layout1();
+  } catch(ex) {
+    actual = ex;
+  }
+
+  ok(!actual, "Should not throw an error.");
+});
+
+// Supplements 417 by providing a test for the intended use case.
+test("not attached even if already rendered", 1, function() {
+  var view = new Backbone.Layout({ className: "test" });
+  view.render();
+
+  var layout = new Backbone.Layout();
+  layout.setView(view);
+
+  ok(!view.contains(layout.el, view.el), "View should not exist inside Layout");
 });

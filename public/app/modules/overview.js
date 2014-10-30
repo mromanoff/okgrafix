@@ -67,9 +67,6 @@ define(function (require, exports, module) {
     Overview.Views.RecentWork = Backbone.View.extend({
         el: false,
         template: 'recent_work/items',
-        initialize: function () {
-            debug('[OVERVIEW] recent work collection: ', this.collection);
-        },
 
         beforeRender: function () {
             this.collection.each(function (item) {
@@ -100,11 +97,9 @@ define(function (require, exports, module) {
             App.useLayout({ template: 'layouts/twoColumn'}).setViews({
                 'header': new Overview.Views.Header({ model: new Overview.Models.Index() }),
                 'main': new Overview.Views.Content({ model: new Overview.Models.Index() }),
-                '#resentWork': new Overview.Views.RecentWork({ collection: recentProjectItems }),
+                '#recentWork': new Overview.Views.RecentWork({ collection: recentProjectItems }),
                 'footer': new Overview.Views.Footer({ model: new Overview.Models.Index() })
-            }).render().promise().done(function () {
-                debug('[OVERVIEW] All views finished rendering.');
-            });
+            }).render().promise().done(function () {});
         });
     };
 

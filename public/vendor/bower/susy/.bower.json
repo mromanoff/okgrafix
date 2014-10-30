@@ -10,6 +10,5 @@
   },
   "_source": "git://github.com/ericam/susy.git",
   "_target": "~1.0.9",
-  "_originalSource": "susy",
-  "_direct": true
+  "_originalSource": "susy"
 }

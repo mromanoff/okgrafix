@@ -41,9 +41,7 @@ define(function (require, exports, module) {
             'header': new Error.Views.Header({ model: new Error.Model() }),
             'main': new Error.Views.Content({ model: new Error.Model() }),
             'footer': new Error.Views.Footer({ model: new Error.Model() })
-        }).render().promise().done(function () {
-            debug('[Error] All views finished rendering.');
-        });
+        }).render().promise().done(function () {});
     };
 
     module.exports = Error;
