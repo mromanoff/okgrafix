@@ -13,8 +13,7 @@ module.exports = function (grunt) {
             all: [
                 'app/**/*.js',
                 'test/jasmine/**/*.js',
-                '!app/fonts/**/*.js',
-                '!app/kss/**/*.js'
+                '!app/fonts/**/*.js'
             ]
         },
 
@@ -66,21 +65,21 @@ module.exports = function (grunt) {
         // projects.  Instead of manually specifying your stylesheets inside the
         // HTML, you can use `@imports` and this task will concatenate only those
         // paths.
-        styles: {
-            // Out the concatenated contents of the following styles into the below
-            // development file path.
-            'dist/styles.css': {
-                // Point this to where your `index.css` file is location.
-                src: 'app/css/index.css',
-
-                // The relative path to use for the @imports.
-                paths: ['app/css'],
-
-                // Rewrite image paths during release to be relative to the `img`
-                // directory.
-                forceRelative: '/app/img/'
-            }
-        },
+        //styles: {
+        //    // Out the concatenated contents of the following styles into the below
+        //    // development file path.
+        //    'dist/styles.css': {
+        //        // Point this to where your `index.css` file is location.
+        //        src: 'app/css/index.css',
+        //
+        //        // The relative path to use for the @imports.
+        //        paths: ['app/css'],
+        //
+        //        // Rewrite image paths during release to be relative to the `img`
+        //        // directory.
+        //        forceRelative: '/app/img/'
+        //    }
+        //},
 
         // Minfiy the distribution CSS.
         cssmin: {
@@ -259,7 +258,7 @@ module.exports = function (grunt) {
     // Grunt BBB tasks.
     grunt.loadNpmTasks('grunt-bbb-server');
     grunt.loadNpmTasks('grunt-bbb-requirejs');
-    grunt.loadNpmTasks('grunt-bbb-styles');
+    //grunt.loadNpmTasks('grunt-bbb-styles');
 
     // When running the default Grunt command, just lint the code.
     grunt.registerTask('default', [
@@ -270,6 +269,7 @@ module.exports = function (grunt) {
         'copy',
         'requirejs',
         //'styles',
-        'cssmin'
+        'cssmin',
+        //'compress'
     ]);
 };

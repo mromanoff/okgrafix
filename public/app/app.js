@@ -7,12 +7,10 @@ define(function (require) {
     var Backbone = require('backbone');
     var Layout = require('layoutmanager');
     var Navigation = require('./modules/components/navigation');
-    var Console = require('console');
     var Picturefill = require('picturefill');
 
     var App = {
         root: '/',
-        console: Console,
         picturefill: Picturefill,
         API: '/app/api/',
         components: {

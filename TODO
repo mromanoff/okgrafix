@@ -1,3 +1,22 @@
 1. create on pageload slide to the top functionality
 2. Back button or breadcrumbs
-3. adsense to track traffic and page views.
+3. adsense to track traffic and page views. --- DONE
+4. update express to latest 4. --- DONE
+5. add spinner
+6. add min-height to main container
+7. add backbone forms
+
+
+
+//TODO
+do you need express at all?
+1. use of npm start start on port 3000
+2. use of BBB server start on port 8000
+
+keep one or the other. one of them have to go
+
+
+
+
+//TODO
+update BBB to latest.
